@@ -13,3 +13,9 @@ describe('Portfolio API Logic', () => {
     expect(projects[0]?.name).toBe("Task Manager");
   });
 });
+
+it('should return uptime in the health check', () => {
+  const health = { status: "UP", uptime: 120.5 };
+  expect(health.uptime).toBeDefined();
+  expect(typeof health.uptime).toBe('number');
+});

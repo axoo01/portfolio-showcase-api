@@ -2,7 +2,7 @@ import * as http from 'node:http';
 
 const PORT = 3000;
 
-// Simple in-memory storage for your projects
+
 let projects = [
   { id: 1, name: "Task Manager", tech: "Node.js", url: "https://my-task-app.com" }
 ];
@@ -10,7 +10,7 @@ let projects = [
 const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'application/json');
 
-  // New: Welcome Route (Root)
+  
   if (req.url === '/' && req.method === 'GET') {
     res.writeHead(200);
     res.end(JSON.stringify({ 
@@ -22,13 +22,13 @@ const server = http.createServer((req, res) => {
     }));
   } 
 
-  // US1: Health Check
+ 
   else if (req.url === '/health' && req.method === 'GET') {
     res.writeHead(200);
     res.end(JSON.stringify({ status: "Portfolio API is live" }));
   } 
   
-  // ... (keep the rest of your project logic));
+
 });
 server.listen(PORT, () => {
   console.log(`Portfolio API running at http://localhost:${PORT}/`);

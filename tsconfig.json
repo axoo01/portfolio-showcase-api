@@ -6,8 +6,8 @@
     "outDir": "./dist",
     "rootDir": "./src",
     
-    // This was the problem: it needs "node" or to be removed
-    "types": ["node"], 
+    
+    "types": ["node", "jest"], 
 
     "strict": true,
     "sourceMap": true,

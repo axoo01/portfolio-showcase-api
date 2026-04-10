@@ -27,3 +27,6 @@ jobs:
 
     - name: Verify Build
       run: ls -R dist/
+
+    - name: Run Tests
+      run: npm test
